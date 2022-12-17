@@ -1,0 +1,60 @@
+//fonts
+@import url("https://fonts.googleapis.com/css2?family=Fragment+Mono");
+
+//theme
+@import "theme";
+
+*, :after, :before {
+  box-sizing: border-box;
+}
+
+html, body {
+  font-size: 16px;
+  margin: 0;
+  font-family: var(--font-base);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button {
+  cursor: pointer;
+}
+
+input,
+select {
+  outline: 0;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+a {
+  border: 0;
+  outline: 0;
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  position: relative;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline: 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 420px) {
+  html {
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,15 @@
+# RewriteEngine On # Turn on the rewriting engine
+# RewriteRule ^read$ read.php [NC,L]
+# RewriteRule ^read/([0-9_-]*)$ read.php?id=$1 [NC,L]
+# RewriteRule ^create$ create.php [NC,L]
+# RewriteRule ^update$ update.php [NC,L]
+# RewriteRule ^delete$ delete.php [NC,L]
+
+
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^api/([^/.]+)$ index.php?action=$1 [NC,QSA]
+RewriteRule ^api/([^/.]+)/([^/.]+)$ index.php?action=$1&page=$2 [NC,QSA]
