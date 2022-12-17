@@ -1,3 +1,5 @@
+const URL = 'http://localhost';
+
 const prepareParams = (params) => {
   let parameters = "",
     objectKeys = Object.keys(params);
@@ -13,7 +15,7 @@ const prepareParams = (params) => {
   return parameters;
 };
 
-export const create = (
+export const post = (
   page,
   data = {},
   callbackOk = (e) => {},
@@ -22,7 +24,7 @@ export const create = (
 ) => {
   const parameters = prepareParams(params);
   fetch(
-    `http://localhost/legger-landing-page/server/api/create/${page}${parameters}`,
+    `${URL}/legger-landing-page/server/api/create/${page}${parameters}`,
     {
       method: "POST",
       body: JSON.stringify(data),
@@ -34,7 +36,7 @@ export const create = (
   });
 };
 
-export const read = (
+export const get = (
   page,
   params = {},
   callbackOk = (e) => {},
@@ -42,7 +44,7 @@ export const read = (
 ) => {
   const parameters = prepareParams(params);
   fetch(
-    `http://localhost/legger-landing-page/server/api/read/${page}${parameters}`
+    `${URL}/legger-landing-page/server/api/read/${page}${parameters}`
   )
     .then(async (data) => {
       var ress = {};

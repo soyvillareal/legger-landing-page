@@ -72,7 +72,7 @@ function FormLanding({ callbackApi = () => {} }) {
       }
     });
     if (pass) {
-      Api.create("lead", data, callbackApi(pass));
+      Api.post("lead", data, callbackApi(pass));
     }
     e.preventDefault();
   };
@@ -84,6 +84,7 @@ function FormLanding({ callbackApi = () => {} }) {
         <input
           className={inputEmpty.clientName ? s.isEmpty : ""}
           id="clientName"
+          data-testid="clientName"
           name="clientName"
           type="text"
           placeholder="Nombre del cliente"
@@ -100,6 +101,7 @@ function FormLanding({ callbackApi = () => {} }) {
       <div className={s.inputContent}>
         <input
           id="nit"
+          data-testid="nit"
           className={inputEmpty.nit ? s.isEmpty : ""}
           name="nit"
           type="text"
@@ -116,6 +118,7 @@ function FormLanding({ callbackApi = () => {} }) {
       <div className={s.inputContent}>
         <input
           id="pointName"
+          data-testid="general"
           className={inputEmpty.pointName ? s.isEmpty : ""}
           name="pointName"
           type="text"
@@ -132,6 +135,7 @@ function FormLanding({ callbackApi = () => {} }) {
       <div className={s.inputContent}>
         <input
           id="teamName"
+          data-testid="general"
           className={inputEmpty.teamName ? s.isEmpty : ""}
           name="teamName"
           type="text"
@@ -148,6 +152,7 @@ function FormLanding({ callbackApi = () => {} }) {
       <div className={s.inputContent}>
         <input
           id="rtc"
+          data-testid="rtc"
           className={inputEmpty.rtc ? s.isEmpty : ""}
           name="rtc"
           type="text"
@@ -164,6 +169,7 @@ function FormLanding({ callbackApi = () => {} }) {
       <div className={s.inputContent}>
         <input
           id="capitanUser"
+          data-testid="general"
           className={inputEmpty.capitanUser ? s.isEmpty : ""}
           name="capitanUser"
           type="text"
@@ -179,6 +185,7 @@ function FormLanding({ callbackApi = () => {} }) {
       <div className={s.inputContent}>
         <select
           id="city"
+          data-testid="city"
           className={inputEmpty.city ? s.isEmpty : ""}
           name="city"
           onChange={handleChange}
@@ -187,9 +194,15 @@ function FormLanding({ callbackApi = () => {} }) {
           <option value="default" disabled>
             Ciudad
           </option>
-          <option value="cali">Cali</option>
-          <option value="medellin">Medellín</option>
-          <option value="bogota">Bogotá</option>
+          <option data-testid="city-option" value="cali">
+            Cali
+          </option>
+          <option data-testid="city-option" value="medellin">
+            Medellín
+          </option>
+          <option data-testid="city-option" value="bogota">
+            Bogotá
+          </option>
         </select>
         {inputEmpty.city && (
           <div className={s.inputEmpty}>* Este campo esta vacio</div>
@@ -200,6 +213,7 @@ function FormLanding({ callbackApi = () => {} }) {
       <label className={`${s.flex} ${s.termsLanding}`}>
         <input
           id="terms"
+          data-testid="terms"
           name="terms"
           type="checkbox"
           onChange={handleInputChange}
@@ -211,9 +225,27 @@ function FormLanding({ callbackApi = () => {} }) {
         </span>
       </label>
 
-      <input id="ip" type="hidden" name="ip" value={ip || ""} />
-      <input id="hour" type="hidden" name="hour" value={hour} />
-      <input id="date" type="hidden" name="date" value={date} />
+      <input
+        id="ip"
+        data-testid="ip"
+        type="hidden"
+        name="ip"
+        value={ip || ""}
+      />
+      <input
+        id="hour"
+        data-testid="hour"
+        type="hidden"
+        name="hour"
+        value={hour}
+      />
+      <input
+        id="date"
+        data-testid="date"
+        type="hidden"
+        name="date"
+        value={date}
+      />
       <button className={s.btnLanding} type="submit">
         Siguiente
       </button>

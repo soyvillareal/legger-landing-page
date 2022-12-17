@@ -14,7 +14,7 @@ function FormLogin() {
       password = form.querySelector("#password").value;
 
     e.preventDefault();
-    Api.read(
+    Api.get(
       "verify",
       { username, password },
       (e) => {

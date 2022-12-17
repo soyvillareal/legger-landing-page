@@ -14,7 +14,7 @@ function FormFilter({ addClass, hash }) {
 
     e.preventDefault();
 
-    Api.read(
+    Api.get(
       "leads",
       { start, end, hash },
       (e) => {
