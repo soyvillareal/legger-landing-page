@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/legger-landing-page/static/css/main.0245f918.css",
-    "main.js": "/legger-landing-page/static/js/main.6d579ce6.js",
+    "main.js": "/legger-landing-page/static/js/main.9946238f.js",
     "static/css/49.a696832a.chunk.css": "/legger-landing-page/static/css/49.a696832a.chunk.css",
     "static/js/49.101dcb4b.chunk.js": "/legger-landing-page/static/js/49.101dcb4b.chunk.js",
     "static/css/589.7428a1f7.chunk.css": "/legger-landing-page/static/css/589.7428a1f7.chunk.css",
@@ -16,7 +16,7 @@
     "index.html": "/legger-landing-page/index.html",
     "static/media/spinner.svg": "/legger-landing-page/static/media/spinner.238d75f34cc53db56af2.svg",
     "main.0245f918.css.map": "/legger-landing-page/static/css/main.0245f918.css.map",
-    "main.6d579ce6.js.map": "/legger-landing-page/static/js/main.6d579ce6.js.map",
+    "main.9946238f.js.map": "/legger-landing-page/static/js/main.9946238f.js.map",
     "49.a696832a.chunk.css.map": "/legger-landing-page/static/css/49.a696832a.chunk.css.map",
     "49.101dcb4b.chunk.js.map": "/legger-landing-page/static/js/49.101dcb4b.chunk.js.map",
     "589.7428a1f7.chunk.css.map": "/legger-landing-page/static/css/589.7428a1f7.chunk.css.map",
@@ -26,6 +26,6 @@
   },
   "entrypoints": [
     "static/css/main.0245f918.css",
-    "static/js/main.6d579ce6.js"
+    "static/js/main.9946238f.js"
   ]
 }
