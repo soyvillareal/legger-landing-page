@@ -10,6 +10,11 @@
     flex-direction: column;
     justify-content: center;
 
+    
+    h1 {
+        text-align: center;
+    }
+
     &>form {
         flex-direction: column;
         padding: 0 15px;

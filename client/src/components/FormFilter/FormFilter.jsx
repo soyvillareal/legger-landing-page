@@ -18,7 +18,6 @@ function FormFilter({ addClass, hash }) {
       "leads",
       { start, end, hash },
       (e) => {
-        console.log(e);
         setJSONToCSV(e);
         setIsEmpty(!1);
       },

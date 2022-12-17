@@ -1,6 +1,8 @@
 <?php
 require('./assets/init.php');
-header("Access-Control-Allow-Origin: " . C_ORIGIN);
+
+$origin = 'http://localhost:3000';
+header("Access-Control-Allow-Origin: $origin");
 header("Content-Type: application/json; charset=UTF-8");
 
 if (!empty($_GET)) {
