@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  Route,
-  Switch,
-  useLocation,
-  useHistory,
-} from 'react-router-dom';
+import { Route, Switch, useLocation, useHistory } from "react-router-dom";
 const Landing = React.lazy(() => import("../scenes/Landing/Landing"));
 const Leads = React.lazy(() => import("../scenes/Leads/Leads"));
 
@@ -27,12 +22,10 @@ const BaseRoutes = () => {
   }, [location, history]);
 
   return (
-    <>
-      <Switch location={background || location}>
-        <Route path={routes.LANDING} exact component={Landing} />
-        <Route path={routes.LEADS} component={Leads} />
-      </Switch>
-    </>
+    <Switch location={background || location}>
+      <Route path={routes.LANDING} exact component={Landing} />
+      <Route path={routes.LEADS} exact component={Leads} />
+    </Switch>
   );
 };
 
